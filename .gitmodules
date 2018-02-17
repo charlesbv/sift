@@ -1,0 +1,3 @@
+[submodule "code/spock"]
+	path = code/spock
+	url = https://github.com/charlesbv/spock
