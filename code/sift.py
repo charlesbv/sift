@@ -1,4 +1,4 @@
-#!/Users/cbv/Library/Enthought/Canopy/edm/envs/User/bin/python
+#replace this line with the path to Canopy python
 
 # -*- coding: utf-8 -*-
 import os

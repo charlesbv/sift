@@ -1,4 +1,0 @@
---2018-02-18 16:03:52--  https://www.celestrak.com/NORAD/elements/gps-ops.txt
-Resolving www.celestrak.com (www.celestrak.com)... 75.151.179.89
-Connecting to www.celestrak.com (www.celestrak.com)|75.151.179.89|:443... connected.
-Unable to establish SSL connection.
