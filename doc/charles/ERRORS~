@@ -20,9 +20,6 @@ $ mpirun -np 2 spock.exe try_spock.txt
 
 ******* end of errors from users
 
-*** 
-when installing SpOCK on a mac with nothing on it (borrowed from the IT), it couldn't find wget. wget wasnt installed. So i installed it from http://rudix.org/packages/wget.html. But then when calling wget in cygnss_tle.py and gps_tle.py it didn't work and i had to use the option --check-no-certificate right after wget. Didnd't seem to be an error when calling wget from SpOCK (swpc). Need to dig more into this. Solutions are found here: https://superuser.com/questions/508696/wget-without-no-check-certificate
-
 ***
 !!! when installing cygwin got error messages "packages corrupted" or "packages in use". the solution i had was to change the root directory (one of the first steps) from C:\cygwin to C:\Users\cbv andt the local packages directory to another location (any location in your home directoy). Looks like just changing the root directoy was enough
 

@@ -76,6 +76,6 @@ IMPORTANT
 for erros installing SpOCK (libraries and stuff, see emails with subject 'SpOCK' (Nima is in the thread from some of the emails so can look for "nima spock" in gmail, the 1st meail of the thread is October 3 2017)
 
 ***
-!!!!!! need to add the option -static after gcc in the Makefile: CC=${PATH_COMPILER} -static≈ß -DINLINE -Wall -g -std=gnu99 -O0 -Wextra -fdiagnostics-color=auto      but only for the gcc option (I think, unless oyu're using mpicc on Windows but don't know if thats possible anyway)
+!!!!!! need to add the option -static after gcc in the Makefile: CC=${PATH_COMPILER} -static -DINLINE -Wall -g -std=gnu99 -O0 -Wextra -fdiagnostics-color=auto      but only for the gcc option (I think, unless oyu're using mpicc on Windows but don't know if thats possible anyway)
 i write this months later: actually on mac doesn't work (ld: library not found for -lcrt0.o) so I need to remove it if mac but keep it if windows
-
+BUT: on mac i need to remogve the "static" if running with gcc. No impact for SIFT since SIFT uses mpirun. But for SpOCK it's a problem. I need to add somephwere that if windowns then using static and if mac then dont use static
