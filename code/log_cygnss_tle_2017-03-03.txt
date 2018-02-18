@@ -1,0 +1,12 @@
+--2018-02-18 16:02:37--  https://www.space-track.org/basicspacedata/query/class/tle/NORAD_CAT_ID/41884,41884,41885,41886,41887,41888,41889,41890,41891/EPOCH/2017-02-21--2017-03-03/format/tle/orderby/NORAD_CAT_ID/
+Resolving www.space-track.org (www.space-track.org)... 207.178.144.234
+Connecting to www.space-track.org (www.space-track.org)|207.178.144.234|:443... connected.
+WARNING: cannot verify www.space-track.org's certificate, issued by ‘CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\\, Inc.,L=Scottsdale,ST=Arizona,C=US’:
+  Self-signed certificate encountered.
+HTTP request sent, awaiting response... 401 Unauthorized
+
+Username/Password Authentication Failed.
+--2018-02-18 16:03:18--  https://www.space-track.org/basicspacedata/query/class/tle_latest/ORDINAL/1/NORAD_CAT_ID/41884,41884,41885,41886,41887,41888,41889,41890,41891/format/tle/
+Resolving www.space-track.org (www.space-track.org)... 2607:7700:0:26::cfb2:90ea, 207.178.144.234
+Connecting to www.space-track.org (www.space-track.org)|2607:7700:0:26::cfb2:90ea|:443... connected.
+Unable to establish SSL connection.

@@ -1,0 +1,13 @@
+--2018-02-18 15:52:10--  https://www.space-track.org/basicspacedata/query/class/tle/NORAD_CAT_ID/41884,41884,41885,41886,41887,41888,41889,41890,41891/EPOCH/2017-01-25--2017-02-04/format/tle/orderby/NORAD_CAT_ID/
+Resolving www.space-track.org (www.space-track.org)... 64:ff9b::cfb2:90ea, 207.178.144.234
+Connecting to www.space-track.org (www.space-track.org)|64:ff9b::cfb2:90ea|:443... connected.
+WARNING: cannot verify www.space-track.org's certificate, issued by ‘CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\\, Inc.,L=Scottsdale,ST=Arizona,C=US’:
+  Self-signed certificate encountered.
+HTTP request sent, awaiting response... 200 OK
+Length: 13064 (13K) [text/plain]
+Saving to: ‘cygnss_2017-02-04_temp.txt’
+
+     0K .......... ..                                         100% 3.91K=3.3s
+
+2018-02-18 15:52:20 (3.91 KB/s) - ‘cygnss_2017-02-04_temp.txt’ saved [13064/13064]
+

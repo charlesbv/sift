@@ -1,0 +1,27 @@
+--2018-02-18 15:52:20--  https://www.celestrak.com/NORAD/elements/gps-ops.txt
+Resolving www.celestrak.com (www.celestrak.com)... 75.151.179.89
+Connecting to www.celestrak.com (www.celestrak.com)|75.151.179.89|:443... connected.
+WARNING: cannot verify www.celestrak.com's certificate, issued by ‘CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US’:
+  Unable to locally verify the issuer's authority.
+HTTP request sent, awaiting response... 200 OK
+Length: 5208 (5.1K) [text/plain]
+Saving to: ‘gps-ops.txt’
+
+     0K .....                                                 100%  452M=0s
+
+2018-02-18 15:52:29 (452 MB/s) - ‘gps-ops.txt’ saved [5208/5208]
+
+--2018-02-18 15:52:33--  https://www.space-track.org/basicspacedata/query/class/tle/NORAD_CAT_ID/24876,24876,25933,26360,26407,26605,26690,27663,27704,28129,28190,28361,28474,28874,29486,29601,32260,32384,32711,35752,36585,37753,38833,39166,39533,39741,40105,40294,40534,40730,41019,41328/EPOCH/2017-01-25--2017-02-04/predicates/OBJECT_NAME,TLE_LINE1,TLE_LINE2/format/3le/orderby/NORAD_CAT_ID/
+Resolving www.space-track.org (www.space-track.org)... 64:ff9b::cfb2:90ea, 207.178.144.234
+Connecting to www.space-track.org (www.space-track.org)|64:ff9b::cfb2:90ea|:443... connected.
+WARNING: cannot verify www.space-track.org's certificate, issued by ‘CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\\, Inc.,L=Scottsdale,ST=Arizona,C=US’:
+  Self-signed certificate encountered.
+HTTP request sent, awaiting response... 200 OK
+Length: 85280 (83K) [text/plain]
+Saving to: ‘gps_2017-02-04_temp.txt’
+
+     0K .......... .......... .......... .......... .......... 60% 18.1K 2s
+    50K .......... .......... .......... ...                  100%  137K=3.0s
+
+2018-02-18 15:52:39 (27.7 KB/s) - ‘gps_2017-02-04_temp.txt’ saved [85280/85280]
+

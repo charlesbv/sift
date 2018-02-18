@@ -1,3 +1,8 @@
+!!! sitll need to check demo before installting spock ( i moved the py to code but just need to check the demo is ok)
+!!!! modif:
+- --no-check-certificate everywhere in src and srcPython
+- modifed makeall.sh
+
 This document explains the installation process for SIFT on Mac. There are two main steps:
 1- installation of Canopy and python packages
 2- installation of SpOCK

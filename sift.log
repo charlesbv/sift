@@ -1,0 +1,80 @@
+02/18/2018 03:51:23 PM INFO: *** Starting SIFT ***
+02/18/2018 03:51:53 PM INFO: *** Running SpOCK propagation ***
+Note: SpOCK produces all satellite and specular point input for SIFT.  This process may take several minutes
+02/18/2018 04:01:45 PM INFO: *** Starting SIFT ***
+02/18/2018 04:02:08 PM INFO: *** Running SpOCK propagation ***
+Note: SpOCK produces all satellite and specular point input for SIFT.  This process may take several minutes
+Traceback (most recent call last):
+  File "./sift.py", line 146, in <module>
+    spock_local(startDate, endDate)
+  File "/Users/cbv/sift/code/spock_local.py", line 41, in spock_local
+    spock_cygnss_spec_parallel_for_sift( start_date , end_date , 'spec')
+  File "/Users/cbv/sift/code/spock_cygnss_spec_parallel_for_sift.py", line 66, in spock_cygnss_spec_parallel_for_sift
+    gps_tle_for_sift(start_date_no_time, '')
+  File "/Users/cbv/sift/code/gps_tle_for_sift.py", line 22, in gps_tle_for_sift
+    tle_celestrak = open("gps-ops.txt")
+IOError: [Errno 2] No such file or directory: 'gps-ops.txt'
+02/18/2018 04:08:06 PM INFO: *** Starting SIFT ***
+02/18/2018 04:08:27 PM INFO: *** Running SpOCK propagation ***
+Note: SpOCK produces all satellite and specular point input for SIFT.  This process may take several minutes
+Traceback (most recent call last):
+  File "./sift.py", line 146, in <module>
+    spock_local(startDate, endDate)
+  File "/Users/cbv/sift/code/spock_local.py", line 41, in spock_local
+    spock_cygnss_spec_parallel_for_sift( start_date , end_date , 'spec')
+  File "/Users/cbv/sift/code/spock_cygnss_spec_parallel_for_sift.py", line 66, in spock_cygnss_spec_parallel_for_sift
+    gps_tle_for_sift(start_date_no_time, '')
+  File "/Users/cbv/sift/code/gps_tle_for_sift.py", line 22, in gps_tle_for_sift
+    tle_celestrak = open("gps-ops.txt")
+IOError: [Errno 2] No such file or directory: 'gps-ops.txt'
+02/18/2018 04:11:36 PM INFO: *** Starting SIFT ***
+02/18/2018 04:11:48 PM INFO: *** Running SpOCK propagation ***
+Note: SpOCK produces all satellite and specular point input for SIFT.  This process may take several minutes
+Traceback (most recent call last):
+  File "./sift.py", line 146, in <module>
+    spock_local(startDate, endDate)
+  File "/Users/cbv/sift/code/spock_local.py", line 41, in spock_local
+    spock_cygnss_spec_parallel_for_sift( start_date , end_date , 'spec')
+  File "/Users/cbv/sift/code/spock_cygnss_spec_parallel_for_sift.py", line 66, in spock_cygnss_spec_parallel_for_sift
+    gps_tle_for_sift(start_date_no_time, '')
+  File "/Users/cbv/sift/code/gps_tle_for_sift.py", line 20, in gps_tle_for_sift
+    raise Exception
+Exception
+02/18/2018 04:57:25 PM INFO: *** Starting SIFT ***
+Traceback (most recent call last):
+  File "./sift.py", line 120, in <module>
+    endDate = raw_input('Analysis Stop Date (YYYY-MM-DDTHH:MM:SS): ')
+KeyboardInterrupt
+02/18/2018 04:57:48 PM INFO: *** Starting SIFT ***
+02/18/2018 04:58:13 PM INFO: *** Running SpOCK propagation ***
+Note: SpOCK produces all satellite and specular point input for SIFT.  This process may take several minutes
+02/18/2018 04:58:49 PM INFO: *** Beginning NHC Forecast Download ***
+02/18/2018 04:59:05 PM INFO: 39 NHC storm(s) downloaded.
+02/18/2018 04:59:05 PM INFO: *** Beginning JTWC Forecast Download ***
+02/18/2018 04:59:07 PM INFO: 0 JTWC storm(s) downloaded.
+02/18/2018 04:59:07 PM INFO: *** Starting main SIFT execution (this may take a few minutes) ***
+Traceback (most recent call last):
+  File "./sift.py", line 2904, in <module>
+    app.frame = CygnssFrame()
+  File "./sift.py", line 1457, in __init__
+    self.initialize_plot_map()
+  File "./sift.py", line 1584, in initialize_plot_map
+    cNames, cMin_lons, cMax_lons, cMin_lats, cMax_lats, cStep_lons, cStep_lats = readZoom(self.userZoom_filepath)
+  File "/Users/cbv/sift/code/readZoom.py", line 3, in readZoom
+    lines = [line.rstrip('\n') for line in open(fileloc)]
+IOError: [Errno 2] No such file or directory: '../input_sift/user_zoom.txt'
+02/18/2018 05:03:03 PM INFO: *** Starting SIFT ***
+02/18/2018 05:03:24 PM INFO: *** Running SpOCK propagation ***
+Note: SpOCK produces all satellite and specular point input for SIFT.  This process may take several minutes
+02/18/2018 05:03:50 PM INFO: *** Beginning NHC Forecast Download ***
+02/18/2018 05:04:01 PM INFO: 39 NHC storm(s) downloaded.
+02/18/2018 05:04:01 PM INFO: *** Beginning JTWC Forecast Download ***
+02/18/2018 05:04:02 PM INFO: 0 JTWC storm(s) downloaded.
+02/18/2018 05:04:02 PM INFO: *** Starting main SIFT execution (this may take a few minutes) ***
+02/18/2018 05:04:06 PM INFO: Analysis Interval: 2017-10-10T00:00:00  -> 2017-10-10T00:09:00
+Traceback (most recent call last):
+  File "./sift.py", line 2490, in on_cb_storms
+    self.satManager.plotStorms(self.plotMap)
+  File "./sift.py", line 943, in plotStorms
+    self.forecastArtistlist[storm].append(plotMap.tissot(self.finalForecasts[storm][idx][3], self.finalForecasts[storm][idx][2], radius_for_tissot(self.finalForecasts[storm][idx][5]), 256, facecolor=self.colorByIntensity_faded[self.finalForecasts[storm][idx][4]], edgecolor='none'))
+NameError: global name 'radius_for_tissot' is not defined
