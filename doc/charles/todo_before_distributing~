@@ -1,13 +1,14 @@
 - make sure the path of spice and gsl in makeall.sh are ./cspice and ./gsl_installation for is_sift -eq 1
 
+- compile code/spock/makeall.sh WITH is_sift=1 and py_only=1. THEN SET BACK py_only=0 and save makeall.sh. This moves the python scripts to code/ so taht users cna run the SIFT demo without installing SpOCK. 
+
 - first line of sift.py should be: "#replace this line with the path to Canopy python", not "#!something"
 
-- in code/: rm -Rf *~ *txt spock/*~ *pyc log_spock* spock_main_input.py cygnss_tle_for_sift.py gps_tle_for_sift.py report_coverage_ground_station_for_sift_parallel.py nb_usable_proc.py read_input_file.py find_in_read_input_order_variables.py spock_cygnss_spec_parallel_for_sift.py ../input_sift/{cygnss_geometry_2016.txt,my_ground_stations.txt} ../input_sift/201* ../sift.log ../doc/*~ ../doc/~*
+- in code/: rm -Rf *~ *txt spock/*~ *pyc log_spock* ../input_sift/{cygnss_geometry_2016.txt,my_ground_stations.txt} ../input_sift/201* ../sift.log ../doc/*~ ../doc/~* spock/spock_* spock/*~ spock/.*~ gps-ops.txt* login*
 
-- make sure your password and id for the storm download is not in sift.py. Also check that startdate and enddate with raw_input are uncommented. Also uncomment "if not os.path.isdir(inputFilepath):" to run spock_local only if it has not been run before with the same start and end dates
+- make sure your password and id for the storm download is not in sift.py (search for "raw_input"). Also check that startdate and enddate with raw_input are uncommented. Also uncomment "if not os.path.isdir(inputFilepath):" to run spock_local only if it has not been run before with the same start and end dates
 
 - make sure .gitignore in code/spock includes cspice and gsl_installation
 
-- make sure .gitignore in ./ includes doc/charles
+- make sure .gitignore in ./ includes doc/charles, code/spock/cspice, code/spock/gsl_installation
 
-- compile code/spock/makeall.sh WITH is_sift=1 and py_only=1. THEN SET BACK py_only=0 and save makeall.sh. This moves the python scripts to code/ so taht users cna run the SIFT demo without installing SpOCK. 

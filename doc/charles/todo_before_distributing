@@ -4,7 +4,7 @@
 
 - first line of sift.py should be: "#replace this line with the path to Canopy python", not "#!something"
 
-- in code/: rm -Rf *~ *txt spock/*~ *pyc log_spock* ../input_sift/{cygnss_geometry_2016.txt,my_ground_stations.txt} ../input_sift/201* ../sift.log ../doc/*~ ../doc/~* spock/spock_* spock/*~ spock/.*~ gps-ops.txt* login*
+- in code/: rm -Rf *~ *txt spock/*~ *pyc log_spock* ../input_sift/{cygnss_geometry_2016.txt,my_ground_stations.txt} ../input_sift/201* ../sift.log ../doc/*~ ../doc/~* spock/spock_* spock/*~ spock/.*~ gps-ops.txt* login* ../.*~
 
 - make sure your password and id for the storm download is not in sift.py (search for "raw_input"). Also check that startdate and enddate with raw_input are uncommented. Also uncomment "if not os.path.isdir(inputFilepath):" to run spock_local only if it has not been run before with the same start and end dates
 
@@ -12,3 +12,4 @@
 
 - make sure .gitignore in ./ includes doc/charles, code/spock/cspice, code/spock/gsl_installation
 
+- make sure you're including demo_input
