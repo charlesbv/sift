@@ -1,0 +1,99 @@
+***
+for the installation of SIFT on mac, you need admina privilleges to install Canopy and wget (to open these applicaitons or to move them to the folder "Applications")
+
+*** 
+CANOPY
+to isntall basemap: Canopy. Dont' need to create an account. I was able to install all the apckages with the method above (C:\Python27\python.exe -m pip install name_package) except basemap (see attemps below). The easy solution that worked was Canopy. just download and isntall canopy from http://docs.enthought.com/canopy/quick-start/install_windows.html (this page has a link to the download page but also explains how to install it). I installed it (didnt require the admin privilleges) then opened it then looked for basemap in 'Available' tab, then installed it. Ddint need to create an account.
+But then when i go bck to the command prompt and try to run the script 'C:\Python27\python.exe python hello.py', it doesnt work because it s trying to use the python that we installed previsouly, which doesnt have basemap installed. basemap was installed within canopy so we need to use the python with canopy too. if you click on the tab 'Settings' in Camopy, in sectino Python Environment, the parameter Prefix is wehre python.exe within canopy is. So you  need to use this python to run the script: C:\Users\cbv\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe hello.py
+then i thought thtat the packages that i had previously isntalled with 
+'C:\Python27\python.exe -m pip install name_package' wouldnt be available from the versino from Canopy (such numpy, scipy etc (see grey packages in Appendix II of suer manual)) but it seems that they are (i tested numpy only). So is it because I installed them before or is it because theya re within Canopy? I think it's because theya re within canopy. So:
+1- I still need to make sure that all pagakes i installed with C:\Python27\python.exe -m pip install name_package are available within CAnopy (just run C:\Users\cbv\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe
+hello.py) and import these modules in hello.py. If they ar not then try to install them from Canopy but without creating an account
+
+i found that the following packages are not instlled in Canopy by default:
+paramiko -> but it looks like we are using paramiko only to connect to the cygnss server, which we don't do in the dsitributed licensed veresion. I still installed using canopy, still without creaeting any user account. Went fine and then worked fine when importing it from the script.
+other packages needed to be installed:
+wxPython: do it with Canopy
+bs4: not in Canopy so in Cygwin terminal: python -m pip install bs4
+
+2- set up the command prompt so that you can type "python" and it
+knows that it's the canopy python to use, not the one in C:\Python27\python.exe. 
+On how to make Python Canopy the default python: https://support.enthought.com/hc/en-us/articles/204469730-Make-Canopy-v1-User-Python-be-your-default-Python-i-e-on-the-PATH-
+-> I install Rapid Enviornment Editor to easily change the environment variables of the Windows system, such as PATH, which is the environment variable you need to change to get Canopy as the default python (as explained in https://support.enthought.com/hc/en-us/articles/204469730-Make-Canopy-v1-User-Python-be-your-default-Python-i-e-on-the-PATH-)
+The only thing I had to do was to add the path of Canopy Python in the variable Path of the tab "User Variables". However, at https://support.enthought.com/hc/en-us/articles/204469730-Make-Canopy-v1-User-Python-be-your-default-Python-i-e-on-the-PATH-, they say the path of Canopy python that you should add is C:\Users\<username>\AppData\Local\Enthought\Canopy\User\Scripts. But for me it doesn't work, there is no such path. So I put the path where I had found python.exe: C:\Users\cbv\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe and it worked. From now on, if I simply type 'python' in the command prompt,it opens python using the Canopy python (I knkow it's the Canopy python because right after i type python, when hit enter it gives a short header with the Enthought in it)
+
+
+
+- Attempts to install basemap
+ https://matplotlib.org/basemap/users/installing.html
+
+- actually right below didnt work
+note that for the step to isntall geos (3rd step, starting with 'Install the GEOS library.'), I had to runs the command export, configure, make, and make install from Cygwin:
+untar the absemap tgz (either cygwin or command prompt): tar -zxvf basemap-1.1.0.tar.gz
+cd /cygdrive/c/Users/cbv/Downloads/basemap-1.1.0/geos-3.3.3
+export GEOS_DIR=/cygdrive/c/Users/cbv (to put the libraries and headers in your Windows home directory) (!!!!!! should i put the in the home directory of Cygwin (/home/cbv)?)
+./configure --prefix-$GEOS_DIR
+- end of actually right below didnt work
+
+still for basemap: apaprently from https://matplotlib.org/basemap/users/installing.html basemap require proj4
+-> i installed proj4 from the proj4 link given at https://matplotlib.org/basemap/users/installing.html (I simpply followed the sintrcutions, I tookk thr 64 bit)
+
+- end of Attempts to install basemap
+
+
+
+
+
+!!!!!!!!!
+when I openeded Canopy (it showed the same window each time I openede before but I was closing it each time) it suggested me to "let Canopy delete the existing Python environment and create a new clean environmtn containing only the packages included in this installer". I was always closing the window but this time I clickd on "Replace with New"
+(note: you need to close all terminal windows otherwise it will crash)
+After clicking on "Replace with New", windows popped up:
+1- removing exisiting python environment direcotry: C:\Users\cbv\AppData\Local\Enthough\Canopy\edm\tmpnycbr1.delete
+2- installing python environment "User" - installing Python
+3- Setting up your Canopy environment
+-> this screwed up my modules because then it couldnt find basemap anymore when importing it from a script (i made sure the python cmmand was still using the canopy python). I iopended canopy and noticed that basemap was not installed anymore. So I installed it again and then I could import basemap fine
+
+
+01-12-2018: working on report_coverage_ground_station_for_sift_parallel.py (in code not code/spock/srcPython)
+
+!!!!!!!!! IMPORTANT BEFORE READING THIS FILE
+I moved spock to /cygdrive/c/Users/cbv/CYGNSS-SIFT-cbv/code/spock 
+but i did that after writing a bunch of notes here so maybe in these notes i metioned a differrnt path of spock. So you need to repalce these paths to spock with /cygdrive/c/Users/cbv/CYGNSS-SIFT-cbv/code/spock
+!!!!!!!!! end of IMPORTANT BEFORE READING THIS FILE
+
+ANOTHER IMPORTANT NOTE: in this file i say that the most recent version of SpOCK is in the Windows version. On 01/10/18 I moved on laptop (google drive):
+- src from Windows but I kept the src on lapton in ~/src_lap_011018.tgz
+- makeall.sh from Windows (and renamed it makeall_9state_lap.sh on laptop) but kep the version of makeall_9state_lap.sh in 010818_9state_lap.sh
+- cygnss/gps_tle.py from Windows
+In other words, I made copies of what I had before and I still need to move the new versino of SpOCK on desktop and big and pleiades
+I then made modif to SpOCK on laptop mac so before making modif on Windows I need to move mac to windows -> OK MOVED IT on jan 12 2018
+
+STILL NEED TO MOVE FROM WINDWOS TO MAC:
+report_coverage_ground_station_for_sift_parallel.py
+
+below in the original INSTALL:
+Note:!!!!!!!!!!!!!!!!! most recent version of find_specular_points.c is on laptop in windows in /cygdrive/c/Users/cbv/CYGNSS-SIFT-cbv/code/spock/src/find_specular_points.c
+-> IMPORTANT TO MOVE IT EVERYWEHER (LAPTOP LINUX, DESKTOP, BIG, PLEIADES)
+
+
+2 blocks below were at the end of the original INSTALL:
+IMPORTANT: I modifided spock src on windows on laptop so most recent version of SpOCK is now on windows laptop in /cygdrive/c/Users/cbv/CYGNSS-SIFT-cbv/code/spock/src. SO MOVE IT EVERYWHERE (LINUX LAPTOP, EEDSKTOP, BIG,PLEIADES) AND DON'T MAKE MODIF IN SPOCK IN THESE PLACES BEFORE MOVING THE WINDOWS VERSION THERE!! (written on jan 5 2018)
+
+!!!!!!!!!!!!!!! THE MOST RECENT MAKEALL.SH IS THE ONE IN WINDOWS OF LATPTOP IN /cygdrive/c/Users/cbv/spock/makeall.sh -> need to move it to laptop, desktop, big (and pleiades) (but be careful when you replace older with this new one ebcause ther are small difference in path from a mcahine to another).SAME FOR MAKEFILE -> take the one from this same path on windoes and move it everywhere
+
+
+***
+Note: in cygnss_tle.py and gps_tle.py I had to change two things in call to wget:
+- replace the " with ' and vice0versa (otherwise the url couldn't be found)
+- remove the output redirection -olog > /dev/null 2>&1
+
+
+***
+Note: from now on need the files cygnss_geometry_2016.txt and my_ground_stations.txt in src/ of spock (these are moved in Makefile (cyg:) from src to input_sift subfolder of sift). 
+IMPORTANT about previous note right above: THIS MEANS THAT WHEN RUNNING MAKEALL.SH for sift (so if you don't use SpOCK indepently of sift) you need to add the option cyg in lines of make (the same way you add the options egm and spec). But do that only when using SpOCK within SIFT because this option cyg: cp files to ../../input_sift, a directory that can be found only if makeall.sh is run from the spock folder in sift (in sift/code/spock)
+ANOTHER IMPORTANT NOTE: the way read_input_file.py called from sift.py looks for the geometry and ground station files require cygnss_geometry_2016.txt and my_ground_stations.txt to actually be in the same directory as the main input file. Therefore at the beginning of spock_local.py I copy cygnss_geometry_2016.txt and my_ground_stations.tx from ../input_sift to the current directory where sift is compiled (and where SpOCK is run and where the main input file)
+
+Note: in SIFT we don't call spock_cygnss_spec_parallel.py but spock_cygnss_spec_parallel_for_sift.py. The only 2 differences are: 
+- in spock_cygnss_spec_parallel_for_sift.py, cygnss_tle.py and gps_tle.py are called as python scripts and not as executables
+- in spock_cygnss_spec_parallel_for_sift.py, geometry_filename (when calling spock_main_input function) must have the path ../input_sift since it's in ../input_sift that the geometry filename is stored
+Also: to run spock need to call spock.exe on Windows but spock on linux so need to know the operating system in pythono script that runs SpOCK -> in spock_cygnss_spec_parallel_for_sift.py I look at variable platform. If there is the word 'win' in it then it's windows (so call spock.exe), otherwise linux (so call spock)
