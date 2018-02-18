@@ -1,6 +1,6 @@
 # PARAMETERS TO SET BEFORE RUNNING THIS SCRIPT
 path_mpirun = 'mpirun'
-spice_path = '/Users/cbv/sift/code/spock/cspice/data'
+spice_path = '/Users/cbv/Google Drive/Work/PhD/Research/Code/cygnss/sift/sift/code/spock/cspice/data'
 # end of PARAMETERS TO SET BEFORE RUNNING THIS SCRIPT
 # This script predicts the positions of the CYGNSS satellites. It can also predict the positions (latitude and longitude) and the gain of the specular points of the CYGNSS constellation. The inputs are:
 # - start date of the simulation (1st argument)
