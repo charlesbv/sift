@@ -1,10 +1,12 @@
 - make sure the path of spice and gsl in makeall.sh are ./cspice and ./gsl_installation for is_sift -eq 1
 
+- in makeall.sh make sure the cmopiler is set to mpicc, that all the make clean and make are uncommented
+ 
 - compile code/spock/makeall.sh WITH is_sift=1 and py_only=1. THEN SET BACK py_only=0 and save makeall.sh. This moves the python scripts to code/ so taht users cna run the SIFT demo without installing SpOCK. 
 
 - first line of sift.py should be: "#replace this line with the path to Canopy python", not "#!something"
 
-- in code/: rm -Rf *~ *txt spock/*~ *pyc log_spock* ../input_sift/{cygnss_geometry_2016.txt,my_ground_stations.txt} ../input_sift/201* ../sift.log ../doc/*~ ../doc/~* spock/spock_* spock/*~ spock/.*~ gps-ops.txt* login*
+- in code/: rm -Rf *~ *txt spock/*~ *pyc log_spock* ../input_sift/{cygnss_geometry_2016.txt,my_ground_stations.txt} ../input_sift/201* ../sift.log ../doc/*~ ../doc/~* spock/spock_* spock/*~ spock/.*~ gps-ops.txt* login* ../.*~
 
 - make sure your password and id for the storm download is not in sift.py (search for "raw_input"). Also check that startdate and enddate with raw_input are uncommented. Also uncomment "if not os.path.isdir(inputFilepath):" to run spock_local only if it has not been run before with the same start and end dates
 
@@ -12,3 +14,4 @@
 
 - make sure .gitignore in ./ includes doc/charles, code/spock/cspice, code/spock/gsl_installation
 
+- make sure you're including demo_input
