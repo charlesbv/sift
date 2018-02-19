@@ -1,3 +1,6 @@
+***
+for the installation of SIFT on mac, you need admina privilleges to install Canopy and wget (to open these applicaitons or to move them to the folder "Applications")
+
 *** 
 CANOPY
 to isntall basemap: Canopy. Dont' need to create an account. I was able to install all the apckages with the method above (C:\Python27\python.exe -m pip install name_package) except basemap (see attemps below). The easy solution that worked was Canopy. just download and isntall canopy from http://docs.enthought.com/canopy/quick-start/install_windows.html (this page has a link to the download page but also explains how to install it). I installed it (didnt require the admin privilleges) then opened it then looked for basemap in 'Available' tab, then installed it. Ddint need to create an account.
