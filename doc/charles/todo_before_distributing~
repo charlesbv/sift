@@ -15,3 +15,5 @@
 - make sure .gitignore in ./ includes doc/charles, code/spock/cspice, code/spock/gsl_installation
 
 - make sure you're including demo_input
+
+- add the option -w in the compilation in the Makefile to ignore the warnings (so taht when the user compile SpOCK it doesn't print all the warnings). Do so in the Makefile of code/spock and code/spock/src/storm
