@@ -1,7 +1,5 @@
 The directory where SpOCK is installed is noted <spock_dir>. 
 
-To install SpOCK, administrator privilleges are not required.
-
 Running SpOCK assumes you're using the bash shell. If you don't want to run SpOCK with the bash shell, (very) simple changes need to be made (email cbv@umich.edu).
 To check if your default shell is bash, type in a Terminal command prompt: echo $SHELL
 If it returns: /bin/bash
@@ -10,7 +8,6 @@ If it returns something else, then you can either temporarily or permanently cha
 To permanently change your shell to bash, type in a Terminal command prompt: chsh -s /bin/bash
 It will ask your password. After typing your password, close and open a new Terminal window for this change be effective.
 To temporarily change you shell to bash, type in a Terminal command prompt: /bin/bash
-(echo $SHELL will still return a different shell but that's ok).
 If you choose to change your shell only temporarily, you'll need to type this command in the Terminal each time you open a new window to run SpOCK.
 
 

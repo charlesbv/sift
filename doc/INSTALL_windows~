@@ -4,8 +4,6 @@ This document explains the installation process for SIFT on Windows. There are t
 3- installation of SpOCK
 If you encounter any difficulty during the installation, email us!
 
-To install SIFT, administrator privilleges are not required.
-
 Before starting, put the SIFT folder in your home directory: C:\Users\<username> and uncompress it. Putting SIFT in your home directory is not necessary but if you wish to put it somewhere else, you need to change the paths mentioned in this document accordingly. You won't need administrator privileges to install SIFT.
 
 * First step: Cygwin

@@ -4,7 +4,6 @@ This document explains the installation process for SIFT on Mac. There are two m
 
 
 Before starting, put the SIFT folder in your home directory (usually /Users/<username>) and uncompress it. Putting SIFT in your home directory is not necessary but if you wish to put it somewhere else, you need to change the paths mentioned in this document accordingly. 
-To install the Mac version of SIFT, administrator privilleges are theoretically not required. However, this installation document assumes you have the administrator privilleges. If you don't, there are a few more steps to follow (email cbv@umich.edu for help).
 
 # First step: Canopy
 Download and install Canopy and Python packages:

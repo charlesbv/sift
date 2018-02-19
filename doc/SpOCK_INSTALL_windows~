@@ -1,7 +1,5 @@
 The directory where SpOCK is installed is noted <spock_dir>. 
 
-To install SpOCK, administrator privilleges are not required.
-
 You first need to install Cygwin, see document "Cygwin_INSTALL". Once Cygwin is installed, follow the instructions below.
 
 - open a Cygwin terminal 

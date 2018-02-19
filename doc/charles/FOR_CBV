@@ -1,3 +1,17 @@
+*** In INSTALL_mac, I explain that administrator privilleges are not theoretically necessary but that the installation docuemtn assumes that the user has them. If they don't, they can contact me. 
+2 things: canopy and wget.
+
+For the installation of SIFT on mac (and SpOCK for wget), you theoretically need administrator privilleges to install Canopy and wget (to open these applications or to move them to the folder "Applications").
+But actually, for canopy, there is a way around it. I was able to move it to the Applications folder of the home directory and it didn't require admin privilleges. The applications folder that is by default suggested in the window that pops up (asking you to move canopy to applications) is in a root directory. But there is another applications folder, located in the home dir and this one doesn't require passowrd. 
+However, Canopy python won't be in the PATH, even from the Canopy command line when typing "python -m pip install bs4". This means the user needs to find where Canopy python is and add it in the PATH (.bash_profile). To do so, Canopy -> Package Manager -> Settings -> Python Environment section: look at parameter "Prefix". python is actually not exactly at this path but somewhere inside this path so the user needs to find it. For me "Prefix" was /Users/cbv/Library/Enthought/Canopy/edm/envs/User and I found python in /Users/cbv/Library/Enthought/Canopy/edm/envs/User/bin.
+So in this example the user needs to add /Users/cbv/Library/Enthought/Canopy/edm/envs/User/bin in the PATH from .bash_profile, at the beginning of the path (so that the other installed python is not called before the Canopy python):
+PATH=/Users/cbv/Library/Enthought/Canopy/edm/envs/User/bin:$PATH
+then in the Canopy terminal: source ~/.bash_profile (make sure the shell bash is used: type /bin/bash  in Canopy terminal before typing ~/.bash_profile),
+When this is done (path to canopy added to .bash_profile) then the user can run the 2 SIFT steps in the Canopy terminal ("python -m pip install bs4" and "which python")
+
+For wget, I haven't found a way around the admin privilleges (but haven't looked into it much). Actually, if they have brew then they can use it to isntall wget without admin privilleges.
+
+
 ***
 In SpOCK_INSTALL_mac, I explain that the shell needs to be bash to run SpOCK, and that if useres want to keep another shell, they need to make simple changes during the installation and email me to know these changes. 
 These changes are simply anywhere where a PATH is added in the .bash_profile. With a different shell than bash, .bash_profile is ignored or at least the command:
@@ -8,17 +22,6 @@ The path that are added during the installation are:
 - in the installation of mpirun
 
 
-
-***
-for the installation of SIFT on mac (and SpOCK for wget), you need admina privilleges to install Canopy and wget (to open these applicaitons or to move them to the folder "Applications").
-Actually, for canopy, I was able to move it to the Applications forlder of the home directory and it didn't require admin privilleges. The applications forlder that is by default suggested in the window that pops up asking you to move canopy to applications is in a root directory. But there is another applications folder, lcoated in the home dir and this doesn't require passowrd. 
-However, Caopy python won't be in the PATH, even from the Canopy command line when typing "python -m pip install bs4". This means the suser needs to find where Canopy python is and add it in the PATH (.bash_profile). To do so, Canopy -> Package Manager -> Settings -> Python Environment tab: look at parameter "Prefix". python is actually somehwere inside this path so the user needs to find it. For me "Prefix" was /users/cbv/Library/Enthought/Canopy/edm/envs/User and I found python in /users/cbv/Library/Enthought/Canopy/edm/envs/User/bin.
-So in this example the user needs to add /users/cbv/Library/Enthought/Canopy/edm/envs/User/bin in the PATH from .bash_profile, at the beginning of the path (so that the other installed python is not called before the Canopy python:
-PATH=/users/cbv/Library/Enthought/Canopy/edm/envs/User/bin:$PATH
-then: source ~/.bash_profile (make sure the shell bash is used: type /bin/bash  in terminal before typing ~/.bash_profile),
-When this is done (path to canopy addded to .bash_profile) then the user can do he 2 steps in the Canopy temrinal ("python -m pip install bs4" and "which python")
-
-For wget, I haven't found a way around the admin privilleges (but haven't looked into it much). Actually, if they have brew then they can use it to isntall wget without admin privilleges.
 
 *** 
 CANOPY
