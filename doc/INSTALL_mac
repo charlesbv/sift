@@ -9,7 +9,7 @@ Before starting, put the SIFT folder in your home directory (usually /Users/<use
 Download and install Canopy and Python packages:
  - go online to https://store.enthought.com/downloads/
  - in Section "STANDARD INSTALLERS", select the macOS 64-bit version corresponding to Python 2.7 (make sure you get the version corresponding to Python 2.7)
- - follow the instructions for the installation. A window might pop up asking you to move Canopy to the folder "Applications". This requires administrator privilleges. If you don't have administrator privilleges, you can move Canopy to the Applications folder of your Home directory(which is different from the default Applications folder that poped up in the window). !!! still need to test this more. actually not ok because then Canopy python in Canopy window can't found because the patht to Caopy python is not in PATH. so need to add to PATH. in canopy package manager in settings look at python environment Prefix -> python is somwehwere in this folder but not exactly tthere
+ - follow the instructions for the installation. A window might pop up asking you to move Canopy to the folder "Applications". This requires administrator privilleges. If you don't have administrator privilleges, you can move Canopy to the Applications folder of your Home directory (which is different from the default Applications folder that poped up in the window). !!! still need to test this more. actually not ok because then Canopy python in Canopy window can't found because the patht to Caopy python is not in PATH. so need to add to PATH. in canopy package manager in settings look at python environment Prefix -> python is somwehwere in this folder but not exactly tthere
  - once Canopy is installed, open it (if it doesn't open from the Launchpad, open it from the Finder by right clicking on Canopy and selecting "Open").
  - go to the tab "Package Manager"
  - in tab "Available", search for :
@@ -20,7 +20,7 @@ Download and install Canopy and Python packages:
   - in this Canopy terminal window, type: python -m pip install bs4
   - in this Canopy terminal window, type: which python
   - in /Users/<username>/SIFT_v1.3_dev/code/sift.py, replace the first line "#replace this line with the path to Canopy python" with the characters "#!" followed by the path returned by the command "which python" in the previous step. If this command returned several paths, select the one with the word "Canopy" in it. For example, if the path is "/Users/cbv/Library/Enthought/Canopy_64bit/User/bin/python" then replace the first line of sift.py with the line:
- #!/Users/cbv/Library/Enthought/Canopy_64bit/User/bin/python
+#!/Users/cbv/Library/Enthought/Canopy_64bit/User/bin/python
   - save the file /Users/<username>/SIFT_v1.3_dev/code/sift.py
   - in the Terminal: chmod a+x /Users/<username>/SIFT_v1.3_dev/code/sift.py
 You're done installing Canopy and the required Python packages.

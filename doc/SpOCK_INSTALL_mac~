@@ -2,10 +2,10 @@ The directory where SpOCK is installed is noted <spock_dir>.
 
 - test if mpirun is already installed on your computer: 
  - in a Terminal command line, type: mpirun
- - if the following message is returned then you need to download and install OpenMpi: "-bash: mpirun: command not found". If you get a message with "OpenMpi could not find anything to do" then you already have OpenMpi installed so you can skip the next step "download and install OpenMpi" and go to the step "cd <spock_dir>"
+ - if the following message is returned then you need to download and install OpenMpi: "mpirun: command not found". If you get a message with "OpenMpi could not find anything to do" then you already have OpenMpi installed so you can skip the next step "download and install OpenMpi" and go to the step "cd <spock_dir>"
 - download and install OpenMpi:
  - go online to: https://www.open-mpi.org/software/
- - in the first table, select the version "openmpi-X.Y.Z.tar.gz"
+ - in the first table, select the version "openmpi-X.Y.Z.tar.gz" (where X, Y, and Z are numbers)
  - cd to the Downloads directory (usually /Users/<username>/Downloads)
  - tar -zxvf openmpi-X.Y.Z.tar.gz
  - cd to the folder created by the previous "tar -zxvf openmpi-X.Y.Z.tar.gz" step (at the time of writing: cd openmpi-3.0.0)
@@ -19,7 +19,7 @@ The directory where SpOCK is installed is noted <spock_dir>.
    - open the file /Users/<username>/.bash_profile (if this file doesn't exist then create it)
    - add the following line in the file /Users/<username>/.bash_profile: 
 PATH=$PATH:/Users/<username>/bin
-(don't forget to replace <username> with your username)
+   (don't forget to replace <username> with your username)
    - go back to the Terminal and type: source /Users/<username>/.bash_profile
  - you're done installing OpenMpi
 

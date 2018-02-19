@@ -1,0 +1,12 @@
+02/19/2018 02:47:03 PM INFO: *** Starting SIFT ***
+02/19/2018 02:47:03 PM INFO: *** Starting main SIFT execution (this may take a few minutes) ***
+Traceback (most recent call last):
+  File "./sift.py", line 2905, in <module>
+    app.frame = CygnssFrame()
+  File "./sift.py", line 1458, in __init__
+    self.initialize_plot_map()
+  File "./sift.py", line 1585, in initialize_plot_map
+    cNames, cMin_lons, cMax_lons, cMin_lats, cMax_lats, cStep_lons, cStep_lats = readZoom(self.userZoom_filepath)
+  File "/Users/cbv/sift/code/readZoom.py", line 3, in readZoom
+    lines = [line.rstrip('\n') for line in open(fileloc)]
+IOError: [Errno 2] No such file or directory: '../input_sift/user_zoom.txt'

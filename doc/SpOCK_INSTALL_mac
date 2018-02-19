@@ -1,5 +1,16 @@
 The directory where SpOCK is installed is noted <spock_dir>. 
 
+Running SpOCK assumes you're using the bash shell. If you don't want to run SpOCK with the bash shell, (very) simple changes need to be made (email cbv@umich.edu).
+To check if your default shell is bash, type in a Terminal command prompt: echo $SHELL
+If it returns: /bin/bash
+then your default shell is bash and you're good to start the installation.
+If it returns something else, then you can either temporarily or permanently change your shell to bash.
+To permanently change your shell to bash, type in a Terminal command prompt: chsh -s /bin/bash
+It will ask your password. After typing your password, close and open a new Terminal window for this change be effective.
+To temporarily change you shell to bash, type in a Terminal command prompt: /bin/bash
+If you choose to change your shell only temporarily, you'll need to type this command in the Terminal each time you open a new window to run SpOCK.
+
+
 - test if mpirun is already installed on your computer: 
  - in a Terminal command line, type: mpirun
  - if the following message is returned then you need to download and install OpenMpi: "mpirun: command not found". If you get a message with "OpenMpi could not find anything to do" then you already have OpenMpi installed so you can skip the next step "download and install OpenMpi" and go to the step "cd <spock_dir>"
@@ -20,7 +31,7 @@ The directory where SpOCK is installed is noted <spock_dir>.
    - add the following line in the file /Users/<username>/.bash_profile: 
 PATH=$PATH:/Users/<username>/bin
    (don't forget to replace <username> with your username)
-   - go back to the Terminal and type: source /Users/<username>/.bash_profile
+   - go back to the Terminal and type: source /Users/<username>/.bash_profile (don't forget to replace <username> with your username)
  - you're done installing OpenMpi
 
 - cd <spock_dir>
