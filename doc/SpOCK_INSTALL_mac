@@ -54,7 +54,7 @@ You're done installing GSL.
 - Download and install SPICE for C:
  - go online to: http://naif.jpl.nasa.gov/naif/toolkit_C.html
  - select the 64-bit Mac version "Mac/Intel, OSX, Apple C, 64bit"
- - download cspice.tar.Z (you don't need to download the other files. In particular, don't follow the instructions of the README file. At the time of writing, they don't work properly. Instead, follow the following steps.)
+ - download cspice.tar.Z (you don't need to download the other files. In particular, don't follow the instructions of the README file. At the time of writing, they don't work properly. Instead, follow the following steps)
  - in the Terminal:
   - cd to the Download directory (usually /Users/<username>/Downloads)
   - cp cspice.tar.Z <spock_dir>
@@ -63,6 +63,12 @@ You're done installing GSL.
   - cd cspice
   - ./makeall.csh (this might take a few minutes)
 You're done installing SPICE.
+
+- Install wget:
+ - you migh already have wget. To find out, type in a Terminal command prompt: wget. If it returns "wget: command not found" then you need to install wget. If if returns something else, then you don't need to install wget and you can directly go to the final step "Install SpOCK".
+ - go online to: http://rudix.org/packages/wget.html
+ - select the .pkg file corresponding to your platform
+ - follow the steps for the installation. If you need administrator privilleges for the installation and you don't have them, you can install wget with other ways (email cbv@umich.edu for help)
 
 - Install SpOCK:
  - still in the Terminal:
