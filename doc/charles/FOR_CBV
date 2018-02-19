@@ -1,5 +1,6 @@
 ***
 for the installation of SIFT on mac, you need admina privilleges to install Canopy and wget (to open these applicaitons or to move them to the folder "Applications").
+actually, for canopy, I was able to move it to the Applications forlder of the home directory and it didn't require admin privilleges. The applications forlder that is by default suggested in the window that pops up asking you to move canopy to applications is in a root directory. But there is another applications folder, lcoated in the home dir and this doesn trequire passowrd.!!! Still need totest this more
 
 *** 
 CANOPY

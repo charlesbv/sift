@@ -18,3 +18,4 @@
 
 - in code/ (make sure you're in code/): rm -Rf *~ *txt spock/*~ *pyc log_spock* ../input_sift/{cygnss_geometry_2016.txt,my_ground_stations.txt} ../input_sift/201* ../sift.log ../doc/*~ ../doc/~* spock/spock_* spock/*~ spock/.*~ gps-ops.txt* login* ../.*~
 
+for cbv (not for distributing): to update SpOCK and SIFT on git, see the 2 emails on Feb 17 2018 in thread "Research Github". If you push spock from master branch in code/spock, make sure that you had the latest version of SpOCK in code/spock. Otherwise, pushing it will overwrite the previous version of SpOCK on git.

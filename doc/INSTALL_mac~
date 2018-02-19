@@ -9,7 +9,7 @@ Before starting, put the SIFT folder in your home directory (usually /Users/<use
 Download and install Canopy and Python packages:
  - go online to https://store.enthought.com/downloads/
  - in Section "STANDARD INSTALLERS", select the macOS 64-bit version corresponding to Python 2.7 (make sure you get the version corresponding to Python 2.7)
- - follow the instructions for the installation
+ - follow the instructions for the installation. You might need administrator privilleges to move Canopy to the folder "Applications".
  - once Canopy is installed, open it (if it doesn't open from the Launchpad, open it from the Finder by right clicking on Canopy and selecting "Open").
  - go to the tab "Package Manager"
  - in tab "Available, search for :
