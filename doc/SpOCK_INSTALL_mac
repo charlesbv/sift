@@ -49,7 +49,7 @@ PATH=$PATH:/Users/<username>/bin
   - tar -zxvf gsl-latest.tar.gz (if there is no gsl-latest.tar.gz then try "tar -zxvf gsl-latest.tar")
   - cd to the GSL folder created by this previous "tar -zxvf gsl-latest.tar.gz" step (at the time of writing: gsl-2.4)
  - follow the instructions in the INSTALL document of this folder. At the time of writing, these are, from the Terminal:
-  - ./configure --prefix=<spock_dir>/gsl_intallation/ (the --prefix option will install GSL in the gsl_installation folder previously created so that administrator privilleges are not required for the installation. If you don't want to install GSL in this directory, you'll have to modify the makeall.sh accordingly (see further step))
+  - ./configure --prefix=<spock_dir>/gsl_installation/ (the --prefix option will install GSL in the gsl_installation folder previously created so that administrator privilleges are not required for the installation. If you don't want to install GSL in this directory, you'll have to modify the makeall.sh accordingly (see further step))
   - make (this step might take several minutes)
   - make install (IF you didn't use the option --prefix two steps before, then you might need administrator privilleges: sudo make install)
 You're done installing GSL.
@@ -68,7 +68,7 @@ You're done installing GSL.
 You're done installing SPICE.
 
 - Install wget:
- - you migh already have wget. To find out, type in a Terminal command prompt: wget. If it returns "wget: command not found" then you need to install wget. If if returns something else, then you don't need to install wget and you can directly go to the final step "Install SpOCK".
+ - you might already have wget. To find out, type in a Terminal command prompt: wget. If it returns "wget: command not found" then you need to install wget. If if returns something else, then you don't need to install wget and you can directly go to the final step "Install SpOCK".
  - go online to: http://rudix.org/packages/wget.html
  - select the .pkg file corresponding to your platform
  - follow the steps for the installation. If you need administrator privilleges for the installation and you don't have them, you can install wget with other ways (email cbv@umich.edu for help)

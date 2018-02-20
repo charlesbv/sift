@@ -27,7 +27,7 @@ Download and install Canopy and Python packages:
 You're done installing Canopy and the required Python packages.
 If you wish, you can run the demo to test SIFT, otherwise you can directly go to the final step (installation of SpOCK). These demos are included to test the functionality of SIFT without invoking SpOCK to generate new SIFT input files. To run SIFT with one of these demo packages, go to /Users/<username>/sift/code and, from the Terminal, type:
 ./sift.py demo <demo_file>
-where <demo_file> is one of:
+and replace <demo_file> with either "short", "long", or "storm". These demos correpond to:
  - short: a six hour run of SIFT designed to open quickly
  - long: a longer SIFT run which showcases basic SIFT functionality
  - storm: a SIFT run including several example storm systems

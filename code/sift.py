@@ -31,6 +31,7 @@ import matplotlib.gridspec as gridspec
 import logging
 import ctypes
 import wx.lib.scrolledpanel
+
 #Non-Library function imports
 from formatMapString import *
 from read_input_file import *
@@ -47,6 +48,7 @@ import os
 import pandas as pd
 from scipy.spatial import distance
 import numpy as np
+from radius_for_tissot import *
 
 # for cbv: #!/Users/cbv/Library/Enthought/Canopy_64bit/User/bin/python
 
@@ -136,8 +138,11 @@ else:
     if sys.stdin.isatty():
         password_jtwc = getpass.getpass('Password: ')
     else:
-        print "Password (it'll show on the screen): "
-        password_jtwc =  sys.stdin.readline().rstrip() 
+        print "Password (it will show on the screen then will get erased after hitting Enter): "
+        password_jtwc =  sys.stdin.readline().rstrip() # on Cygwin getpass doesn't work
+        sys.stdout.write("\033[F") 
+        print("                                                                      ")
+
 
 
     # # Run SpOCK propagator to generate necessary SIFT inputs
@@ -465,7 +470,7 @@ class SatelliteManager(object):
         self.pos_warning_text_ax_map_x = self.min_lon[self.inZoom] + self.mapTextCorrectionFactor
         self.pos_warning_text_ax_map_y = self.min_lat[self.inZoom] + ( self.height_fig_with_map - self.width_fig_with_map ) / 40. + self.mapTextCorrectionFactor
         self.time_warning_text_ax_map = self.ax_map.text(self.pos_warning_text_ax_map_x, self.pos_warning_text_ax_map_y,'',horizontalalignment ='left', weight = 'bold',fontsize = 12, color = 'r')
-        
+
 
         ###Build Sat/GS interaction data structures###
         self.calcGSinteraction()
