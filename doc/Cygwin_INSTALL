@@ -5,22 +5,38 @@ To install Cygwin:
 - in Command Prompt, type: cd Downloads
 - in Command Prompt, type: setup-x86_64.exe --no-admin
 - A window 'Cygwin Setup' pops up. On this window:
-  - click on "Next"
-  - select "Install from Internet"
-  - seclect "Just Me" or "All Users" (leave Root Directory as it is)
-  - click on "Next" (leave Local Package Directory as it is)
-  - select "Direct Connection"
-  - for "Choose a Download site" select "cygwin.mirror.constant.com" then click on "Next"
-  - the "Select Packages" window opens. In "View" bar select "Category", then install the following packages (in "Search" bar):
-   - tcsh -> select "Shells" by clicking on "+" next to it -> click on "Skip" to replace it with the version name -> check box for "Bin?" then in "Search" bar: !!! still need to test this tcsh 
-   - wget -> select "Web" by clicking on "+" next to it -> click on "Skip" to replace it with the version name -> check box for "Bin?" then in "Search" bar:
-   - make -> select "Devel" by clicking on "+" next to it -> select "make: the GNU version of the 'make' utility" by clicking on "Skip", which replaces it with the version name -> check box for "Bin?" then in "Search" bar:
-   - gcc -> select "Devel" by clicking on "+" next to it -> select "gcc-g++: GNU Compiler Collection (C++)" by clicking on "Skip", which replaces it with the version name -> check box for "Bin?" then in "Search" bar:
-   - openmpi -> select "Libs" by clicking on "+" next to it -> select "libopenmpi12: open message passing interface API (C runtime)" AND "libopenmpi-devel: Open Message Passing Interface API (development)" by clicking on "Skip", which replaces it with the version name -> check box for "Bin?" for the two packages
-  - you're now done selecting the packages so click on "Next" (bottom right of window)
-  - Window "Resolving Dependencies": make sure the box "Select required packages (RECOMMENDED)" is checked, then click on "Next" 
-  - Wait for the installation to proceed. If you get any error, such as "package corrupted" or "package in use", close Cygwin, go back to the Comand prompt and type again "setup-x86_64.exe --no-admin". At the 3rd window, change the root directory from C:\cygwin to your home directory C:\Users\<username> (replace <username> with your username). Then follow the same steps to install the packages
-  - Window "Create Icons": choose to check or not the boxes "Create icon on Desktop" and "Add icon to Start Menu", then click on "Finish"
+   - click on "Next"
+   - select "Install from Internet"
+   - select "Just Me" or "All Users" (leave Root Directory as it is)
+   - click on "Next" (leave Local Package Directory as it is)
+   - select "Direct Connection"
+   - for "Choose a Download site" select "cygwin.mirror.constant.com" then click on "Next"
+   - the "Select Packages" window opens. In "View" bar select "Category", then install the 
+   following packages (in "Search" bar):
+      - tcsh -> select "Shells" by clicking on "+" next to it -> click on "Skip" to replace 
+      it with the version name -> check box for "Bin?" then in "Search" bar: 
+      - wget -> select "Web" by clicking on "+" next to it -> click on "Skip" to replace it 
+      with the version name -> check box for "Bin?" then in "Search" bar:
+      - make -> select "Devel" by clicking on "+" next to it -> select "make: the GNU version 
+      of the 'make' utility" by clicking on "Skip", which replaces it with the version name -> check 
+      box for "Bin?" then in "Search" bar:
+      - gcc -> select "Devel" by clicking on "+" next to it -> select "gcc-g++: GNU Compiler 
+      Collection (C++)" by clicking on "Skip", which replaces it with the version name -> check box 
+      for "Bin?" then in "Search" bar:
+      - openmpi -> select "Libs" by clicking on "+" next to it -> select "libopenmpi12: open message 
+      passing interface API (C runtime)" *AND* "libopenmpi-devel: Open Message Passing Interface API (development)" 
+      by clicking on "Skip", which replaces it with the version name -> check box for "Bin?" 
+      for the two packages
+   - you're now done selecting the packages so click on "Next" (bottom right of window)
+   - Window "Resolving Dependencies": make sure the box "Select required packages (RECOMMENDED)" is 
+   checked, then click on "Next" 
+   - Wait for the installation to proceed. If you get any error, such as "package corrupted" or 
+   "package in use", close Cygwin, go back to the Command prompt and type again "setup-x86_64.exe --no-admin". 
+   At the 3rd window, change the root directory from C:\cygwin to your home directory C:\Users\<username> 
+   (replace <username> with your username). Then follow the same steps to install the packages
+   - Window "Create Icons": choose to check or not the boxes "Create icon on Desktop" and "Add icon to Start Menu", 
+   then click on "Finish"
 You're done installing Cygwin!
 
-Note that if you want to install other packages in the future, then you need to run again "setup-x86_64.exe --no-admin". So don't remove the setup-x86_64.exe from your system.
+Note that if you want to install other packages in the future, then you need to run again "setup-x86_64.exe --no-admin". 
+So don't remove the setup-x86_64.exe from your system.
