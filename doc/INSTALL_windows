@@ -17,8 +17,7 @@ Cygwin provides a functionality similar to a Linux distribution on Windows.
 You can access you Windows files from a Cygwin terminal window. For instance, to access the "C:" drive, 
 type in a Cygwin terminal: cd /cygdrive/c. To go to your Windows home directory, where SIFT is located: 
 cd /cygdrive/c/Users/<user_name> (replace <user_name> with your username).
-From now on, the commands need to by typed from a Cygwin terminal window. Open a Cygwin terminal window 
-(if you choose to create an icon in the previous step, there is an icon on your Desktop).
+From now on, the commands need to by typed from a Cygwin terminal window. 
 
 # Second step: Canopy
 Download and install Canopy and Python packages:
@@ -36,7 +35,7 @@ Download and install Canopy and Python packages:
    - go to Tools -> Canopy Command Prompt. This opens a Canopy terminal window
       - in this Canopy terminal window, type: python -m pip install bs4
       - in this Canopy terminal window, type: where python
-      - in /cygdrive/c/Users/<username>/sift/code/sift.py (recall, /cygdrive/c/Users/<username>/sift/code/sift.py 
+   - in /cygdrive/c/Users/<username>/sift/code/sift.py (recall, /cygdrive/c/Users/<username>/sift/code/sift.py 
       is the Cygwin path, which is noted C:\Users\<username>\sift\code\sift.py in the Windows 
       nomenclature), replace the first line "#replace this line with the path to Canopy python" with 
       the characters "#!" followed by the path returned by the command "where python" in the previous step. 
@@ -44,8 +43,8 @@ Download and install Canopy and Python packages:
       For example, if the path is "C:\Users\smith\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe" 
       then replace the first line of sift.py with the line:
       #!C:\Users\cbv\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe   
-      - save the file /cygdrive/c/Users/<username>/sift/code/sift.py
-      - in Cygwin terminal: chmod a+x /cygdrive/c/Users/<username>/sift/code/sift.py
+   - save the file /cygdrive/c/Users/<username>/sift/code/sift.py
+   - in Cygwin terminal: chmod a+x /cygdrive/c/Users/<username>/sift/code/sift.py
 You're done installing Canopy and the required Python packages.
 
 If you wish, you can run the demo to test SIFT, otherwise you can directly go to the final 
@@ -54,11 +53,11 @@ without invoking SpOCK to generate new SIFT input files.
 To run SIFT with one of these demo packages, go to /cygdrive/c/Users/<username>/sift/code and, 
 from a Cygwin terminal, type:
 ./sift.py demo <demo_file>
-where <demo_file> is one of:
- - short: a six hour run of SIFT designed to open quickly
- - long: a longer SIFT run which showcases basic SIFT functionality
- - storm: a SIFT run including several example storm systems
-If these demo packages all run successfully then SIFT is set up correctly. The final step is 
+and replace <demo_file> with either "short", "long", or "storm". These demos correspond to:
+   - short: a six hour run of SIFT designed to open quickly
+   - long: a longer SIFT run which showcases basic SIFT functionality
+   - storm: a SIFT run including several example storm systems
+If the demo packages run successfully then SIFT is set up correctly. The final step is 
 to install SpOCK.
 
 * Third step: SpOCK
@@ -68,6 +67,10 @@ of this document, the folder SIFT should be in C:\Users\<username>, which is cal
 /cygdrive/c/Users/<user_name> in Cygwin).
 
 
-*** You're done installing SIFT! To launch it, please refer to Section "Normal SIFT Operation 
-of the End User Manual". 
+*** You're done installing SIFT! To launch it, please refer to Section "Normal SIFT Operation"
+in the user manual.
+The first time you run SIFT you might see two windows pop up to ask you the authorization to run 
+"spec" and "storm". Here also, you can hit "Cancel".
+When you run SIFT, a warning message might also appear in the Cygwin terminal "cannot remove 'nbcore_temp'".
+You can ignore this message.
 

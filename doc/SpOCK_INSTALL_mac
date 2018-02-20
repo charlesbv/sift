@@ -96,19 +96,17 @@ You're done installing SPICE.
 - Install SpOCK:
    - still in the Terminal:
       - cd <spock_dir> 
-      - ./makeall.sh (ignore all the warnings) (IF (and only if) you installed GSL in another directory 
-      than gsl_installation (see step "./configure in the installation of GSL") then modify the variable 
-      "path_gsl" in makeall.sh) 
+      - ./makeall.sh (IF (and only if) you installed GSL in another directory than gsl_installation 
+      (see step "./configure in the installation of GSL") then modify the variable "path_gsl" in makeall.sh)
       - source ~/.bash_profile 
 You're done installing SpOCK.
 
 - Give it a try!
-   - cd <spock_dir>/Examples
-   - open the file try_spock.txt and modify the line below #SPICE to: <spock_dir>/cspice/data 
+   - open the file <spock_dir>/Examples/try_spock.txt and modify the line below #SPICE to: <spock_dir>/cspice/data 
    (don't forget to change <spock_dir> with the directory where SpOCK was installed).  
    For example, if spock_dir is /Users/smith/spock then the line under #SPICE should be 
    /Users/smith/spock/cspice/data. Then save try_spock.txt and go back to the Terminal 
-   (you should still be in <spock_dir>/Examples)
+   - cd <spock_dir>/Examples
    - mpirun -np 2 spock try_spock.txt
 If the installation of SpOCK went well, then you shouldn't see any error. 
 The message:

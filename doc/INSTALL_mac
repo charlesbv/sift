@@ -47,7 +47,7 @@ and replace <demo_file> with either "short", "long", or "storm". These demos cor
    - short: a six hour run of SIFT designed to open quickly
    - long: a longer SIFT run which showcases basic SIFT functionality
    - storm: a SIFT run including several example storm systems
-If these demo packages all run successfully then SIFT is set up correctly. The final step is 
+If the demo packages run successfully then SIFT is set up correctly. The final step is 
 to install SpOCK.
 
 
@@ -56,8 +56,9 @@ see document "SpOCK_INSTALL_mac". In this document (see first line): "spock_dir"
 replaced everywhere by "/Users/<username>/sift/code/spock" (as explained in the beginning 
 of this document, the folder SIFT should be in /Users/<user_name>).
 
-*** You're done installing SIFT! To launch it, please refer to Section "Normal SIFT Operation 
-of the End User Manual". 
+*** You're done installing SIFT! To launch it, please refer to Section "Normal SIFT Operation"
+in the user manual.
+
 
 
 
