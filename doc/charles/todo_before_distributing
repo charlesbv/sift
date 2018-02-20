@@ -15,7 +15,8 @@
 
 - make sure you're including demo_input
 
-- add the option -w in the compilation in the Makefile to ignore the warnings (so that when the user compile SpOCK it doesn't print all the warnings). Do so in the Makefile of code/spock and code/spock/src/storm. And in the comilation of find_specular_point: $path_compiler -w -o "$path_spock_abso"/spec ./src/find_specular_points.c -lm # change the path of the executable here
+- add the option -w in the compilation in the Makefile to ignore the warnings (so that when the user compile SpOCK it doesn't print all the warnings). Do so in the Makefile of code/spock and code/spock/src/storm. And in the comilation of find_specular_point: 
+$path_compiler -o "$path_spock_abso"/spec ./src/find_specular_points.c -lm -w
 
 - in code/ (make sure you're in code/): rm -Rf *~ *txt spock/*~ *pyc log_spock* ../input_sift/{cygnss_geometry_2016.txt,my_ground_stations.txt} ../input_sift/201* ../sift.log ../doc/*~ ../doc/~* spock/spock_* spock/*~ spock/.*~ gps-ops.txt* login* ../.*~
 

@@ -109,7 +109,7 @@ if len(sys.argv) > 1:
 
     #Help command
     elif sys.argv[1] == "help" or sys.argv[1] == "Help":
-        print "For help, please refer to the SIFT user manual available in the CYGNSS-SIFT folder"
+        print "For help, please refer to the SIFT user manual available in the sift/doc directory."
         sys.exit()
 
 #Default running mode

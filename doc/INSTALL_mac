@@ -20,12 +20,12 @@ Download and install Canopy and Python packages:
  - go to Tools -> Canopy Command Prompt (or Canopy Terminal). This opens a Canopy terminal window
   - in this Canopy terminal window, type: python -m pip install bs4
   - in this Canopy terminal window, type: which python
-  - in /Users/<username>/SIFT_v1.3_dev/code/sift.py, replace the first line "#replace this line with the path to Canopy python" with the characters "#!" followed by the path returned by the command "which python" in the previous step. If this command returned several paths, select the one with the word "Canopy" in it. For example, if the path is "/Users/cbv/Library/Enthought/Canopy_64bit/User/bin/python" then replace the first line of sift.py with the line:
+  - in /Users/<username>/sift/code/sift.py, replace the first line "#replace this line with the path to Canopy python" with the characters "#!" followed by the path returned by the command "which python" in the previous step. If this command returned several paths, select the one with the word "Canopy" in it. For example, if the path is "/Users/cbv/Library/Enthought/Canopy_64bit/User/bin/python" then replace the first line of sift.py with the line:
 #!/Users/cbv/Library/Enthought/Canopy_64bit/User/bin/python
-  - save the file /Users/<username>/SIFT_v1.3_dev/code/sift.py
-  - in the Terminal: chmod a+x /Users/<username>/SIFT_v1.3_dev/code/sift.py
+  - save the file /Users/<username>/sift/code/sift.py
+  - in the Terminal: chmod a+x /Users/<username>/sift/code/sift.py
 You're done installing Canopy and the required Python packages.
-If you wish, you can run the demo to test SIFT, otherwise you can directly go to the final step (installation of SpOCK). These demos are included to test the functionality of SIFT without invoking SpOCK to generate new SIFT input files. To run SIFT with one of these demo packages, go to /Users/<username>/SIFT_v1.3_dev/code and, from the Terminal, type:
+If you wish, you can run the demo to test SIFT, otherwise you can directly go to the final step (installation of SpOCK). These demos are included to test the functionality of SIFT without invoking SpOCK to generate new SIFT input files. To run SIFT with one of these demo packages, go to /Users/<username>/sift/code and, from the Terminal, type:
 ./sift.py demo <demo_file>
 where <demo_file> is one of:
  - short: a six hour run of SIFT designed to open quickly
@@ -35,7 +35,7 @@ If these demo packages all run successfully then SIFT is set up correctly. The f
 
 
 * Second step: SpOCK
-see document "SpOCK_INSTALL_mac". In this document (see first line): "spock_dir" should be replaced everywhere by "/Users/<username>/SIFT_v1.3_dev/code/spock" (as explained in the beginning of this document, the folder SIFT should be in /Users/<user_name>).
+see document "SpOCK_INSTALL_mac". In this document (see first line): "spock_dir" should be replaced everywhere by "/Users/<username>/sift/code/spock" (as explained in the beginning of this document, the folder SIFT should be in /Users/<user_name>).
 
 
 *** You're done installing SIFT! To launch it, please refer to Section "Normal SIFT Operation of the End User Manual". 

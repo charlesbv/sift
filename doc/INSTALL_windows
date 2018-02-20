@@ -29,12 +29,12 @@ Download and install Canopy and Python packages:
  - go to Tools -> Canopy Command Prompt. This opens a Canopy terminal window
   - in this Canopy terminal window, type: python -m pip install bs4
   - in this Canopy terminal window, type: where python
-  - in /cygdrive/c/Users/<username>/SIFT_v1.3_dev/code/sift.py (recall, /cygdrive/c/Users/<username>/SIFT_v1.3_dev/code/sift.py is the Cygwin path, which is noted C:\Users\<username>\SIFT_v1.3_dev\code\sift.py in the Windows nomenclature), replace the first line "#replace this line with the path to Canopy python" with the characters "#!" followed by the path returned by the command "where python" in the previous step. If this command returned several paths, select the one with the word "Canopy" in it. For example, if the path is "C:\Users\smith\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe" then replace the first line of sift.py with the line:
+  - in /cygdrive/c/Users/<username>/sift/code/sift.py (recall, /cygdrive/c/Users/<username>/sift/code/sift.py is the Cygwin path, which is noted C:\Users\<username>\sift\code\sift.py in the Windows nomenclature), replace the first line "#replace this line with the path to Canopy python" with the characters "#!" followed by the path returned by the command "where python" in the previous step. If this command returned several paths, select the one with the word "Canopy" in it. For example, if the path is "C:\Users\smith\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe" then replace the first line of sift.py with the line:
  #!C:\Users\cbv\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe   
-  - save the file /cygdrive/c/Users/<username>/SIFT_v1.3_dev/code/sift.py
-  - in Cygwin terminal: chmod a+x /cygdrive/c/Users/<username>/SIFT_v1.3_dev/code/sift.py
+  - save the file /cygdrive/c/Users/<username>/sift/code/sift.py
+  - in Cygwin terminal: chmod a+x /cygdrive/c/Users/<username>/sift/code/sift.py
 You're done installing Canopy and the required Python packages.
-If you wish, you can run the demo to test SIFT, otherwise you can directly go to the final step (installation of SpOCK). These demos are included to test the functionality of SIFT without invoking SpOCK to generate new SIFT input files. To run SIFT with one of these demo packages, go to /cygdrive/c/Users/<username>/SIFT_v1.3_dev/code and, from a Cygwin terminal, type:
+If you wish, you can run the demo to test SIFT, otherwise you can directly go to the final step (installation of SpOCK). These demos are included to test the functionality of SIFT without invoking SpOCK to generate new SIFT input files. To run SIFT with one of these demo packages, go to /cygdrive/c/Users/<username>/sift/code and, from a Cygwin terminal, type:
 ./sift.py demo <demo_file>
 where <demo_file> is one of:
  - short: a six hour run of SIFT designed to open quickly
@@ -43,7 +43,7 @@ where <demo_file> is one of:
 If these demo packages all run successfully then SIFT is set up correctly. The final step is to install SpOCK.
 
 * Third step: SpOCK
-see document "SpOCK_INSTALL_windows". In this document (see first line): "spock_dir" should be replaced by "/cygdrive/c/Users/<username>/SIFT_v1.3_dev/code/spock" (as explained in the beginning of this document, the folder SIFT should be in C:\Users\<username>, which is called /cygdrive/c/Users/<user_name> in Cygwin).
+see document "SpOCK_INSTALL_windows". In this document (see first line): "spock_dir" should be replaced by "/cygdrive/c/Users/<username>/sift/code/spock" (as explained in the beginning of this document, the folder SIFT should be in C:\Users\<username>, which is called /cygdrive/c/Users/<user_name> in Cygwin).
 
 
 *** You're done installing SIFT! To launch it, please refer to Section "Normal SIFT Operation of the End User Manual". 
