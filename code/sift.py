@@ -1,4 +1,4 @@
-#replace this line with the path to Canopy python"
+#replace this line with the path to Canopy python
 
 
 # -*- coding: utf-8 -*-

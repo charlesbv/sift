@@ -2,7 +2,7 @@ This document explains the installation process for SIFT on Windows. There are t
    1- installation of Cygwin
    2- installation of Canopy and python packages
    3- installation of SpOCK
-If you encounter any difficulty during the installation, email us!
+If you encounter any difficulty during the installation, don't hesitate to email us!
 
 To install SIFT, administrator privileges are not required.
 
@@ -14,7 +14,7 @@ you need to change the paths mentioned in this document accordingly.
 To install Cygwin, see document "Cygwin_INSTALL".
 
 Cygwin provides a functionality similar to a Linux distribution on Windows. 
-You can access you Windows files from a Cygwin terminal window. For instance, to access the "C:" drive, 
+You can access your Windows files from a Cygwin terminal window. For instance, to access the "C:" drive, 
 type in a Cygwin terminal: cd /cygdrive/c. To go to your Windows home directory, where SIFT is located: 
 cd /cygdrive/c/Users/<user_name> (replace <user_name> with your username).
 From now on, the commands need to by typed from a Cygwin terminal window. 
@@ -42,7 +42,7 @@ Download and install Canopy and Python packages:
       If this command returned several paths, select the one with the word "Canopy" in it. 
       For example, if the path was "C:\Users\smith\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe" 
       then you would replace the first line of sift.py with the line:
-      #!C:\Users\cbv\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe   
+      #!C:\Users\smith\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe   
    - save the file /cygdrive/c/Users/<username>/sift/code/sift.py
    - in Cygwin terminal: chmod a+x /cygdrive/c/Users/<username>/sift/code/sift.py
 You're done installing Canopy and the required Python packages.
@@ -52,13 +52,13 @@ step (installation of SpOCK). This demo is included to test the functionality of
 without invoking SpOCK to generate new SIFT input files. 
 To run SIFT with the demo, go to /cygdrive/c/Users/<username>/sift/code and, 
 from a Cygwin terminal, type:
-./sift.py demo short. 
+./sift.py demo storm 
 If the demo runs successfully then SIFT is set up correctly. The final step is 
 to install SpOCK.
 
 * Third step: SpOCK
 see document "SpOCK_INSTALL_windows". In this document (see first line): "spock_dir" should 
-be replaced by "/cygdrive/c/Users/<username>/sift/code/spock" (as explained in the beginning 
+be replaced by "/cygdrive/c/Users/<username>/sift/code/spock" (as explained at the beginning 
 of this document, the folder SIFT should be in C:\Users\<username>, which is called 
 /cygdrive/c/Users/<user_name> in Cygwin).
 

@@ -1,7 +1,7 @@
 This document explains the installation process for SIFT on Mac. There are two main steps:
 1- installation of Canopy and python packages;
 2- installation of SpOCK.
-If you encounter any difficulty during the installation, email us!
+If you encounter any difficulty during the installation, don't hesitate to email us!
 
 Before starting, put the SIFT folder in your home directory (usually /Users/<username>) 
 and uncompress it. Putting SIFT in your home directory is not necessary but if you wish 
@@ -43,7 +43,7 @@ step (installation of SpOCK). This demo is included to test the functionality of
 without invoking SpOCK to generate new SIFT input files. 
 To run SIFT with the demo, go to /Users/<username>/sift/code and, 
 from the Terminal, type:
-./sift.py demo storm.
+./sift.py demo storm
 If the demo runs successfully then SIFT is set up correctly. The final step is to install SpOCK.
 
 
