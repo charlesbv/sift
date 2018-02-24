@@ -40,24 +40,20 @@ Download and install Canopy and Python packages:
       nomenclature), replace the first line "#replace this line with the path to Canopy python" with 
       the characters "#!" followed by the path returned by the command "where python" in the previous step. 
       If this command returned several paths, select the one with the word "Canopy" in it. 
-      For example, if the path is "C:\Users\smith\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe" 
-      then replace the first line of sift.py with the line:
+      For example, if the path was "C:\Users\smith\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe" 
+      then you would replace the first line of sift.py with the line:
       #!C:\Users\cbv\AppData\Local\Enthought\Canopy\edm\envs\User\python.exe   
    - save the file /cygdrive/c/Users/<username>/sift/code/sift.py
    - in Cygwin terminal: chmod a+x /cygdrive/c/Users/<username>/sift/code/sift.py
 You're done installing Canopy and the required Python packages.
 
 If you wish, you can run the demo to test SIFT, otherwise you can directly go to the final 
-step (installation of SpOCK). These demos are included to test the functionality of SIFT 
+step (installation of SpOCK). This demo is included to test the functionality of SIFT 
 without invoking SpOCK to generate new SIFT input files. 
-To run SIFT with one of these demo packages, go to /cygdrive/c/Users/<username>/sift/code and, 
+To run SIFT with the demo, go to /cygdrive/c/Users/<username>/sift/code and, 
 from a Cygwin terminal, type:
-./sift.py demo <demo_file>
-and replace <demo_file> with either "short", "long", or "storm". These demos correspond to:
-   - short: a six hour run of SIFT designed to open quickly
-   - long: a longer SIFT run which showcases basic SIFT functionality
-   - storm: a SIFT run including several example storm systems
-If the demo packages run successfully then SIFT is set up correctly. The final step is 
+./sift.py demo short. 
+If the demo runs successfully then SIFT is set up correctly. The final step is 
 to install SpOCK.
 
 * Third step: SpOCK

@@ -19,13 +19,12 @@ Once Cygwin is installed, follow the instructions below.
       try "tar -zxvf gsl-latest.tar")
       - cd to the GSL folder created by this previous "tar -zxvf gsl-latest.tar.gz" step 
       (at the time of writing: gsl-2.4)
-      - at the time of writing, the instructions to follow in the INSTALL document are, from the Cygwin terminal:
-         - ./configure --prefix=<spock_dir>/gsl_installation/ (the --prefix option will install GSL 
+      - ./configure --prefix=<spock_dir>/gsl_installation/ (the --prefix option will install GSL 
 	 in the gsl_installation folder previously created so that administrator privileges are not 
 	 required for the installation. If you don't want to install GSL in this directory, you'll have 
 	 to modify the makeall.sh accordingly (see further step))
-         - make (this step might take several minutes)
-         - make install (IF you didn't use the option --prefix two steps before, then you might need 
+      - make (this step might take several minutes)
+      - make install (IF (and only if) you didn't use the option --prefix two steps before, then you might need 
 	 administrator privileges: sudo make install)
 You're done installing GSL.
 

@@ -1,6 +1,6 @@
 This document explains the installation process for SIFT on Mac. There are two main steps:
-1- installation of Canopy and python packages
-2- installation of SpOCK
+1- installation of Canopy and python packages;
+2- installation of SpOCK.
 If you encounter any difficulty during the installation, email us!
 
 Before starting, put the SIFT folder in your home directory (usually /Users/<username>) 
@@ -28,27 +28,23 @@ Download and install Canopy and Python packages:
       - in this Canopy terminal window, type: python -m pip install bs4
       - in this Canopy terminal window, type: which python
       - in /Users/<username>/sift/code/sift.py, replace the first line "#replace this line 
-      with the path to Canopy python" with the characters "#!" followed by the path returned by 
+      with the path to Canopy python with the characters "#!" followed by the path returned by 
       the command "which python" in the previous step. If this command returned several paths, 
       select the one with the word "Canopy" in it. 
-      For example, if the path is "/Users/cbv/Library/Enthought/Canopy_64bit/User/bin/python" 
-      then replace the first line of sift.py with the line:
-      #!/Users/cbv/Library/Enthought/Canopy_64bit/User/bin/python
+      For example, if the path was "/Users/smith/Library/Enthought/Canopy_64bit/User/bin/python" 
+      then you would replace the first line of sift.py with the line:
+      #!/Users/smith/Library/Enthought/Canopy_64bit/User/bin/python
       - save the file /Users/<username>/sift/code/sift.py
       - in the Terminal: chmod a+x /Users/<username>/sift/code/sift.py
 You're done installing Canopy and the required Python packages.
 
 If you wish, you can run the demo to test SIFT, otherwise you can directly go to the final 
-step (installation of SpOCK). These demos are included to test the functionality of SIFT 
-without invoking SpOCK to generate new SIFT input files. To run SIFT with one of these demo 
-packages, go to /Users/<username>/sift/code and, from the Terminal, type:
-./sift.py demo <demo_file>
-and replace <demo_file> with either "short", "long", or "storm". These demos correspond to:
-   - short: a six hour run of SIFT designed to open quickly
-   - long: a longer SIFT run which showcases basic SIFT functionality
-   - storm: a SIFT run including several example storm systems
-If the demo packages run successfully then SIFT is set up correctly. The final step is 
-to install SpOCK.
+step (installation of SpOCK). This demo is included to test the functionality of SIFT 
+without invoking SpOCK to generate new SIFT input files. 
+To run SIFT with the demo, go to /Users/<username>/sift/code and, 
+from the Terminal, type:
+./sift.py demo storm.
+If the demo runs successfully then SIFT is set up correctly. The final step is to install SpOCK.
 
 
 * Second step: SpOCK

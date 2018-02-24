@@ -7,13 +7,14 @@ Running SpOCK assumes you're using the bash shell. If you don't want to run SpOC
 To check if your default shell is bash, type in a Terminal command prompt: echo $SHELL
 If it returns: /bin/bash
 then your default shell is bash and you're good to start the installation.
-If it returns something else, then you can either temporarily or permanently change your shell to bash.
+If it returns something else, it means your default shell isn't bash. You can either temporarily or 
+permanently change your shell to bash.
 To permanently change your shell to bash, type in a Terminal command prompt: chsh -s /bin/bash
-It will ask your password. After typing your password, close and open a new Terminal window for this 
-change be effective.
+It will ask for your password. After typing your password, close and open a new Terminal window for this 
+change to be effective.
 To temporarily change you shell to bash, type in a Terminal command prompt: /bin/bash
 (echo $SHELL will still return a different shell but that's ok).
-If you choose to change your shell only temporarily, you'll need to type this command in the Terminal 
+If you choose to change your shell only temporarily, you'll need to type this command ("/bin/bash") in the Terminal 
 each time you open a new window to run SpOCK.
 
 
@@ -23,30 +24,28 @@ each time you open a new window to run SpOCK.
    "mpirun: command not found". 
    If you get a message with "OpenMpi could not find anything to do" then you already have 
    OpenMpi installed so you can skip the next step "download and install OpenMpi" and go to 
-   the step "cd <spock_dir>"
+   the step "In a new Terminal window"
 - download and install OpenMpi (if you don't already have it):
    - go online to: https://www.open-mpi.org/software/
    - in the first table, select the version "openmpi-X.Y.Z.tar.gz" (where X, Y, and Z are numbers)
-   - cd to the Downloads directory (usually /Users/<username>/Downloads)
+   - in the Terminal, cd to the Downloads directory (usually /Users/<username>/Downloads)
    - tar -zxvf openmpi-X.Y.Z.tar.gz
    - cd to the folder created by the previous "tar -zxvf openmpi-X.Y.Z.tar.gz" step (at the time 
    of writing: cd openmpi-3.0.0)
-   - at the time of writing, the instructions to follow in the INSTALL document are (depending on 
-   if you have or not the administrator privileges):
-      - if you have the administrator privileges:
-         - ./configure 
-         - sudo make all install (this step takes time) 
-      - if you don't have the administrator privileges:
-         - ./configure --prefix=/Users/<username> (don't forget to replace <username> with your username)
-         - make all install (this step takes time)
-         - open the file /Users/<username>/.bash_profile (if this file doesn't exist then create it)
-         - add the following line in the file /Users/<username>/.bash_profile: 
+   - if you have administrator privileges: 
+      - ./configure 
+      - sudo make all install (this step takes time) 
+   - if you don't have administrator privileges:
+      - ./configure --prefix=/Users/<username> (don't forget to replace <username> with your username)
+      - make all install (this step takes time)
+      - open the file /Users/<username>/.bash_profile (if this file doesn't exist then create it)
+      - add the following line in the file /Users/<username>/.bash_profile: 
 	 PATH=$PATH:/Users/<username>/bin
    	 (don't forget to replace <username> with your username)
-   	 - go back to the Terminal and type: source /Users/<username>/.bash_profile (don't forget to 
-	 replace <username> with your username)
-You're done installing OpenMpi
+      - save the file /Users/<username>/.bash_profile
+You're done installing OpenMpi.
 
+In a NEW Terminal window:
 - cd <spock_dir>
 - mkdir gsl_installation
 
@@ -58,14 +57,13 @@ You're done installing OpenMpi
       - cd to the Downloads directory (usually /Users/<username>/Downloads)
       - tar -zxvf gsl-latest.tar.gz (if there is no gsl-latest.tar.gz then try "tar -zxvf gsl-latest.tar")
       - cd to the GSL folder created by this previous "tar -zxvf gsl-latest.tar.gz" step (at the time of 
-      writing: gsl-2.4)
-      - at the time of writing, the instructions in the INSTALL document are, from the Terminal:
-         - ./configure --prefix=<spock_dir>/gsl_installation/ (the --prefix option will install GSL in the 
+      writing: cd gsl-2.4)
+      - ./configure --prefix=<spock_dir>/gsl_installation/ (the --prefix option will install GSL in the 
 	 gsl_installation folder previously created so that administrator privileges are not required for 
 	 the installation. If you don't want to install GSL in this directory, you'll have to modify the 
 	 makeall.sh accordingly (see further step))
-  	 - make (this step might take several minutes)
-  	 - make install (IF (and only if) you didn't use the option --prefix two steps before, then you might 
+      - make (this step might take several minutes)
+      - make install (IF (and only if) you didn't use the option --prefix two steps before, then you might 
 	 need administrator privileges: sudo make install)
 You're done installing GSL.
 
@@ -91,7 +89,7 @@ You're done installing SPICE.
    - go online to: http://rudix.org/packages/wget.html
    - select the .pkg file corresponding to your platform
    - follow the steps for the installation. If you need administrator privileges for the installation 
-   and you don't have them, you can install wget with other ways (email cbv@umich.edu for help)
+   and you don't have them, there are other ways you can install wget (email cbv@umich.edu for help)
 
 - Install SpOCK:
    - still in the Terminal:
